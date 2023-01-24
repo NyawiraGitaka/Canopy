@@ -6,7 +6,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CartComponent } from './components/cart/cart.component';
 
-
+// routes
 const routes: Routes = [
   {
     path: '',

@@ -16,7 +16,7 @@ export class ProductListingComponent implements OnInit {
 
   ngOnInit(): void {
     // private productAPISerive: ProductApiService
-    this.products = getProducts;
+    this.products = getProducts.filter((product) => product.fresh == false);
   }
 
   // private getProducts() {

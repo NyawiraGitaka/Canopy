@@ -29,7 +29,7 @@ const getProducts: Product[] = [
         product_id: "4",
         product_description: '4K UHD, Netflix, Amazon Prime, Showmax DVBT2, HDMI, USB WIFI integrated Dolby Audio Narrow Bezel Design Free Wall Bracket',
         product_name: 'Bruhm 55" Smart TV',
-        product_image: 'assets/img/products/electronics/Bruhm 55".png',
+        product_image: 'assets/img/products/electronics/Bruhm55.png',
         product_price: "Ksh 60,500",
         fresh: false
     },
@@ -100,18 +100,35 @@ const getProducts: Product[] = [
     {
         product_id: "13",
         product_description: "",
-        product_name: "Panasonic Bagless Vacuum",
+        product_name: "Canon Camera",
+        product_image: "assets/img/products/electronics/3.png",
+        product_price: "Ksh 40,600",
+        fresh: true
+    },
+    {
+        product_id: "14",
+        product_description: "",
+        product_name: "Nunix 12L Fryer",
         product_image: "assets/img/products/electronics/nunix.jpeg",
         product_price: "Ksh 9,600",
         fresh: true
     },
-product_id: "13",
-        product_description: "",
-        product_name: "Panasonic Bagless Vacuum",
-        product_image: "assets/img/products/electronics/nunix.jpeg",
-        product_price: "Ksh 9,600",
+    {
+        product_id: "13",
+        product_description: "SmartTemp Technology – automatically adjusts the temperature to make everything super crispy on the outside and tender on the inside Shake Reminder – comes with the helpful Shake reminder, letting you know when to shake the contents for an even fry",
+        product_name: "Nutricook Air Fryer",
+        product_image: "assets/img/products/electronics/nutricook.jpeg",
+        product_price: "Ksh 20,995",
         fresh: true
-
+    },
+    {
+        product_id: "13",
+        product_description: "Electric quartz heater 400-1200 watts Tilt-over protection switch 3 quarts heating elements",
+        product_name: "Ramtons Electric Heater",
+        product_image: "assets/img/products/electronics/ramtonsheater.jpeg",
+        product_price: "Ksh 4,900",
+        fresh: true
+    },
 ];
 
 export default getProducts;

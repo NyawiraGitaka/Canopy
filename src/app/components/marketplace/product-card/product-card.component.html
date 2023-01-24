@@ -45,8 +45,8 @@
                 <a href="#">{{ product.product_name }}</a>
             </h3>
             <div class="product-card-price">
-                <span class="card-price-regular">{{ product.product_price }}</span>
+                <span class="card-price-regular">{{ product.currency }}{{ product.product_price | number }}</span>
             </div>
-            <a href="#" class="btn btn-primary w-100 mt-3">Buy {{ product.product_name }}</a>
+            <a href="#" class="btn btn-primary w-100 mt-3" (click)="setCartItem(product)">Buy {{ product.product_name }}</a>
         </div>
     </div>

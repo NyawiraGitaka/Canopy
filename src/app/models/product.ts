@@ -4,7 +4,9 @@ type Product = {
     product_description: string,
     fresh: boolean,
     product_image: string,
-    product_price: string,
+    product_price: number,
+    currency: string,
+    product_quantity: number,
 }
 
 export default Product;

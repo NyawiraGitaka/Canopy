@@ -1,151 +1,68 @@
-        <main id="MainContent" class="content-for-layout">
-            <div class="cart-page mt-100">
-                <div class="container">
-                    <div class="cart-page-wrapper">
-                        <div class="row">
-                            <div class="col-lg-7 col-md-12 col-12">
-                                <table class="cart-table w-100">
-                                    <thead>
-                                      <tr>
-                                        <th class="cart-caption heading_18">Product</th>
-                                        <th class="cart-caption heading_18"></th>
-                                        <th class="cart-caption text-center heading_18 d-none d-md-table-cell">Quantity</th>
-                                        <th class="cart-caption text-end heading_18">Price</th>
-                                      </tr>
-                                    </thead>
-                        
-                                    <tbody>
-                                        <tr class="cart-item">
-                                          <td class="cart-item-media">
-                                            <div class="mini-img-wrapper">
-                                                <img class="mini-img" src="assets/img/products/furniture/1.jpg" alt="img">
-                                            </div>                                    
-                                          </td>
-                                          <td class="cart-item-details">
-                                            <h2 class="product-title"><a href="#">Eliot Reversible Sectional</a></h2>
-                                            <p class="product-vendor">XS / Dove Gray</p>                                   
-                                          </td>
-                                          <td class="cart-item-quantity">
+ <div class="offcanvas offcanvas-end" tabindex="-1" id="drawer-cart">
+                <div class="offcanvas-header border-btm-black">
+                    <h5 class="cart-drawer-heading text_16">Your Cart ({{ totalCartItems }})</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body p-0">
+                    <div class="cart-content-area d-flex justify-content-between flex-column">
+                        <div class="minicart-loop custom-scrollbar">
+                            <!-- minicart item -->
+                            <ng-container *ngFor="let product of cartItems">
+                                <div class="minicart-item d-flex">
+                                    <div class="mini-img-wrapper">
+                                        <img class="mini-img" src="{{ product.product_image }}" alt="img">
+                                    </div>
+                                    <div class="product-info">
+                                        <h2 class="product-title"><a href="#">{{ product.product_name }}</a></h2>
+                                        <div class="misc d-flex align-items-end justify-content-between">
                                             <div class="quantity d-flex align-items-center justify-content-between">
                                                 <button class="qty-btn dec-qty"><img src="assets/img/icon/minus.svg"
                                                         alt="minus"></button>
-                                                <input class="qty-input" type="number" name="qty" value="1" min="0">
+                                                <input class="qty-input" type="number" name="qty" value="{{ product.product_quantity }}" min="0">
                                                 <button class="qty-btn inc-qty"><img src="assets/img/icon/plus.svg"
                                                         alt="plus"></button>
                                             </div>
-                                            <a href="#" class="product-remove mt-2">Remove</a>                           
-                                          </td>
-                                          <td class="cart-item-price text-end">
-                                            <div class="product-price">$580.00</div>                           
-                                          </td>                        
-                                        </tr>
-                                        <tr class="cart-item">
-                                          <td class="cart-item-media">
-                                            <div class="mini-img-wrapper">
-                                                <img class="mini-img" src="assets/img/products/furniture/2.jpg" alt="img">
-                                            </div>                                    
-                                          </td>
-                                          <td class="cart-item-details">
-                                            <h2 class="product-title"><a href="#">Vita Lounge Chair</a></h2>
-                                            <p class="product-vendor">XS / Pink</p>                                   
-                                          </td>
-                                          <td class="cart-item-quantity">
-                                            <div class="quantity d-flex align-items-center justify-content-between">
-                                                <button class="qty-btn dec-qty"><img src="assets/img/icon/minus.svg"
-                                                        alt="minus"></button>
-                                                <input class="qty-input" type="number" name="qty" value="1" min="0">
-                                                <button class="qty-btn inc-qty"><img src="assets/img/icon/plus.svg"
-                                                        alt="plus"></button>
+                                            <div class="product-remove-area d-flex flex-column align-items-end">
+                                                <div class="product-price">{{ product.currency }}{{ product.product_price * product.product_quantity | number}}</div>
+                                                <a href="#" class="product-remove" (click)="removeProduct(product.product_id)">Remove</a>
                                             </div>
-                                            <a href="#" class="product-remove mt-2">Remove</a>                           
-                                          </td>
-                                          <td class="cart-item-price text-end">
-                                            <div class="product-price">$580.00</div>                           
-                                          </td>
-                                        </tr>
-                                        <tr class="cart-item">
-                                          <td class="cart-item-media">
-                                            <div class="mini-img-wrapper">
-                                                <img class="mini-img" src="assets/img/products/furniture/3.jpg" alt="img">
-                                            </div>                                    
-                                          </td>
-                                          <td class="cart-item-details">
-                                            <h2 class="product-title"><a href="#">Sarno Dining Chair</a></h2>
-                                            <p class="product-vendor">XS / Dove Gray</p>                                  
-                                          </td>
-                                          <td class="cart-item-quantity">
-                                            <div class="quantity d-flex align-items-center justify-content-between">
-                                                <button class="qty-btn dec-qty"><img src="assets/img/icon/minus.svg"
-                                                        alt="minus"></button>
-                                                <input class="qty-input" type="number" name="qty" value="1" min="0">
-                                                <button class="qty-btn inc-qty"><img src="assets/img/icon/plus.svg"
-                                                        alt="plus"></button>
-                                            </div>
-                                            <a href="#" class="product-remove mt-2">Remove</a>                           
-                                          </td>
-                                          <td class="cart-item-price text-end">
-                                            <div class="product-price">$580.00</div>                           
-                                          </td>                        
-                                        </tr>
-                                        <tr class="cart-item">
-                                          <td class="cart-item-media">
-                                            <div class="mini-img-wrapper">
-                                                <img class="mini-img" src="assets/img/products/furniture/4.jpg" alt="img">
-                                            </div>                                    
-                                          </td>
-                                          <td class="cart-item-details">
-                                            <h2 class="product-title"><a href="#">Eliot Reversible Sectional</a></h2>
-                                            <p class="product-vendor">XS / Dove Gray</p>                                  
-                                          </td>
-                                          <td class="cart-item-quantity">
-                                            <div class="quantity d-flex align-items-center justify-content-between">
-                                                <button class="qty-btn dec-qty"><img src="assets/img/icon/minus.svg"
-                                                        alt="minus"></button>
-                                                <input class="qty-input" type="number" name="qty" value="1" min="0">
-                                                <button class="qty-btn inc-qty"><img src="assets/img/icon/plus.svg"
-                                                        alt="plus"></button>
-                                            </div>
-                                            <a href="#" class="product-remove mt-2">Remove</a>                           
-                                          </td>
-                                          <td class="cart-item-price text-end">
-                                            <div class="product-price">$580.00</div>                           
-                                          </td>                        
-                                        </tr>
-                                    </tbody>
-                                  </table>
-                            </div>
-                            <div class="col-lg-5 col-md-12 col-12">
-                                <div class="cart-total-area">
-                                    <h3 class="cart-total-title d-none d-lg-block mb-0">Cart Totals</h3>
-                                    <div class="cart-total-box mt-4">
-                                        <div class="subtotal-item subtotal-box">
-                                            <h4 class="subtotal-title">Subtotals:</h4>
-                                            <p class="subtotal-value">$465.00</p>
-                                        </div>
-                                        <div class="subtotal-item shipping-box">
-                                            <h4 class="subtotal-title">Shipping:</h4>
-                                            <p class="subtotal-value">$10.00</p>
-                                        </div>
-                                        <div class="subtotal-item discount-box">
-                                            <h4 class="subtotal-title">Discount:</h4>
-                                            <p class="subtotal-value">$100.00</p>
-                                        </div>
-                                        <hr />
-                                        <div class="subtotal-item discount-box">
-                                            <h4 class="subtotal-title">Total:</h4>
-                                            <p class="subtotal-value">$1000.00</p>
-                                        </div>
-                                        <p class="shipping_text">Shipping & taxes calculated at checkout</p>
-                                        <div class="d-flex justify-content-center mt-4">
-                                            <a href="checkout.html" class="position-relative btn-primary text-uppercase">
-                                                Procced to checkout
-                                            </a>
                                         </div>
                                     </div>
                                 </div>
+                            </ng-container>
+                            <!-- minicart item -->
+                            
+                        </div>
+                        <div class="minicart-footer">
+                            <div class="minicart-calc-area">
+                                <div class="minicart-calc d-flex align-items-center justify-content-between">
+                                    <span class="cart-subtotal mb-0">Total</span>
+                                    <span class="cart-subprice">
+                                       Ksh {{ totalPrice | number }}
+                                    </span>
+                                </div>
+                                <p class="cart-taxes text-center my-4">Taxes and shipping will be calculated at checkout.
+                                </p>
+                            </div>
+                            <div class="minicart-btn-area d-flex align-items-center justify-content-between">
+                                <a (click)="stringCart()" class="minicart-btn btn-primary">Checkout</a>
                             </div>
                         </div>
                     </div>
+                    <div class="cart-empty-area text-center py-5 d-none">
+                        <div class="cart-empty-icon pb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                                >
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M16 16s-1.5-2-4-2-4 2-4 2"></path>
+                                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                            </svg>
+                        </div>
+                        <p class="cart-empty">You have no items in your cart</p>
+                    </div>
                 </div>
-            </div>            
-        </main>
+            </div>
+            <!-- drawer cart end -->

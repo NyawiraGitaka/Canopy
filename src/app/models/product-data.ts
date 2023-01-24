@@ -91,20 +91,27 @@ const getProducts: Product[] = [
     },
     {
         product_id: "12",
-        product_description: "Blender good tech",
+        product_description: "Max. Input Power 1800W 5-layer Filtration System with HEPA filter HEPA 2.2 L Dust Capacity Full Capture Nozzle",
         product_name: "Panasonic Bagless Vacuum",
         product_image: "assets/img/products/electronics/panasonicbaglessvacuum.jpeg",
         product_price: "Ksh 18,995",
         fresh: false
     },
     {
-        product_id: "12",
-        product_description: "Max. Input Power 1800W 5-layer Filtration System with HEPA filter HEPA 2.2 L Dust Capacity Full Capture Nozzle",
+        product_id: "13",
+        product_description: "",
         product_name: "Panasonic Bagless Vacuum",
-        product_image: "assets/img/products/electronics/panasonicbaglessvacuum.jpeg",
-        product_price: "Ksh 18,995",
+        product_image: "assets/img/products/electronics/nunix.jpeg",
+        product_price: "Ksh 9,600",
         fresh: true
     },
+product_id: "13",
+        product_description: "",
+        product_name: "Panasonic Bagless Vacuum",
+        product_image: "assets/img/products/electronics/nunix.jpeg",
+        product_price: "Ksh 9,600",
+        fresh: true
+
 ];
 
 export default getProducts;
